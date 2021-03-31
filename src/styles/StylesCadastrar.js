@@ -21,20 +21,26 @@ export const TituloApp = styled.Text`
 
 export const AreaAvatar = styled.View`
   background-color: #aa88ff;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   border-radius: 15px;
   padding: 5px;
+  /* flex-direction: row; */
 `;
-export const AreaBotaoAvatar = styled.View`
+export const ContainerIconeAvatar = styled.View`
   background-color: #aa88ff;
-  flex-direction: row-reverse;
+  width: 30%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
 `;
+
 export const Avatar = styled.Image`
   height: 150px;
   width: 150px;
   border-radius: 15px;
 `;
-export const AlterarAvatar = styled.TouchableOpacity``;
+export const BuscarFotoPerfil = styled.TouchableOpacity``;
+export const TirarSelfiePerfil = styled.TouchableOpacity``;
 export const AreaInput = styled.View`
   flex-direction: row;
   align-items: center;

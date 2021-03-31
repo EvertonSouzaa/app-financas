@@ -17,8 +17,9 @@ import {
   TextoBotao,
   ScrollArea,
   AreaAvatar,
-  AlterarAvatar,
-  AreaBotaoAvatar,
+  BuscarFotoPerfil,
+  TirarSelfiePerfil,
+  ContainerIconeAvatar,
 } from "../../styles/StylesCadastrar";
 
 import Header from "../../components/HeaderCadastrar";
@@ -37,17 +38,27 @@ export default function Cadastrar() {
         <Container>
           <AreaAvatar>
             <Avatar source={require("../../img/avatar.png")} />
-            <AreaBotaoAvatar>
-              <AlterarAvatar onPress={() => {}}>
-                <MaterialCommunityIcons
-                  name="image-search"
-                  size={30}
-                  color="#e8f0fe"
-                />
-              </AlterarAvatar>
-            </AreaBotaoAvatar>
           </AreaAvatar>
+          <ContainerIconeAvatar>
+            <BuscarFotoPerfil onPress={() => {}}>
+              <MaterialCommunityIcons
+                name="image-search"
+                size={30}
+                color="#e8f0fe"
+              />
+            </BuscarFotoPerfil>
 
+            <TirarSelfiePerfil onPress={() => {}}>
+              <Entypo name="camera" size={30} color="#e8f0fe" />
+            </TirarSelfiePerfil>
+          </ContainerIconeAvatar>
+          {/* <AreaAvatar>
+            <AreaBotaoCamera>
+              <TirarSelfiePerfil onPress={() => {}}>
+                <Entypo name="camera" size={30} color="#e8f0fe" />
+              </TirarSelfiePerfil>
+            </AreaBotaoCamera>
+          </AreaAvatar> */}
           <AreaInput>
             <Entypo name="user" size={25} color="#9438f5" />
             <Input
@@ -58,7 +69,6 @@ export default function Cadastrar() {
               onChangeText={(text) => setNome(text)}
             />
           </AreaInput>
-
           <AreaInput>
             <MaterialIcons name="email" size={25} color="#9438f5" />
             <Input
@@ -70,7 +80,6 @@ export default function Cadastrar() {
               onChangeText={(text) => setEmail(text)}
             />
           </AreaInput>
-
           <AreaInput>
             <FontAwesome5 name="key" size={25} color="#9438f5" />
             <Input
@@ -93,7 +102,6 @@ export default function Cadastrar() {
               secureTextEntry
             />
           </AreaInput>
-
           <BotaoEntrar onPress={() => {}}>
             <TextoBotao>Cadastrar</TextoBotao>
           </BotaoEntrar>
